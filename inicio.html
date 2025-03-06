@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    <!-- Biblioteca de iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* 🔥 Corrección: Menú lateral ahora se abre correctamente */
+        .menu {
+            position: fixed;
+            top: 60px; /* Bajé el menú para que no se sobreponga con la navbar */
+            left: -250px; /* 🔥 Antes estaba en -100%, ahora en -250px para un mejor control */
+            width: 250px;
+            height: calc(100% - 60px);
+            background: #FFF;
+            z-index: 1050;
+            transition: left 0.5s ease-in-out;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu.active {
+            left: 0; /* 🔥 Ahora el menú se mostrará correctamente */
+        }
+
+        /* Ajuste del botón toggle */
+        .toggle {
+            position: fixed;
+            top: 80px;
+            left: 10px;
+            z-index: 1100;
+            cursor: pointer;
+        }
+
+        .toggle a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #262626;
+        }
+        .div1 {
+    position: relative;
+    height: 500px;
+    top: 73px;
+    
+    overflow: hidden;
+}
+
+.div1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%; /* Un poco más grande para evitar bordes vacíos */
+    height: 110%;
+    background-image: url('https://plus.unsplash.com/premium_photo-1661887713388-6f093435b59a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGFub3IlQzMlQTFtaWNvfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Imagen translúcida */
+    z-index: -1;
+}
+
+
+
+.div1 {
+    position: relative;
+    height: 600px;
+    top: 73px;
+    overflow: hidden;
+}
+
+.div1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://plus.unsplash.com/premium_photo-1661887713388-6f093435b59a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGFub3IlQzMlQTFtaWNvfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+.div-hijo{
+    position: relative;
+    top: 100px;
+    left: 80px;
+    width: 300px;
+}
+
+.imagen1{
+    background-color: none;
+    position: absolute;
+    z-index: 10px;
+    left: 650px;
+   bottom: -10px;
+
+}    
+    </style>
+</head>
+<body>
+<nav>
+    <div class="navegador-superior">
+        <div class="logo"><a href="#logo">logo chejo</a></div>
+            <ul class="nav-sup">
+                <li><a href="inicio.html">inicio</a></li>
+                <li><a href="mis principios y creencias.html">principios y creencias</a></li>
+                <li><a href="mi vida.html">mi vida</a></li>
+                <li><a href="experiencias.html">Objetos valiosos</a></li>
+                <li><a href="mi pasion.html">mi pasión</a></li>
+            </ul>
+    </div>
+</nav>
+   
+    <!-- Botón de menú lateral -->
+    <div class="toggle">
+        <a href="#" id="menu-toggle"><i class="fa fa-bars"></i></a> 
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="menu">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="institucion.html">Institución</a></li>
+                <li><a href="datoExtra.html">Datos Extra</a></li>
+            </ul>
+        </div>
+    </div> <!-- Aquí cierra el div del menú lateral -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 🔥 Corrección: Ahora el menú lateral se abre correctamente
+            $("#menu-toggle").click(function(e){
+                e.preventDefault();
+                $(".menu").toggleClass("active");
+            });
+
+          
+
+            function moveIndicator(element) {
+                let position = element.position();
+                let width = element.outerWidth();
+                $(".hori-selector").css({
+                    "left": position.left + "px",
+                    "width": width + "px"
+                });
+            }
+
+            document.addEventListener("mousemove", function (e) {
+        let x = e.clientX / window.innerWidth; 
+        let y = e.clientY / window.innerHeight; 
+
+        document.querySelector(".div1::before").style.transform = 
+            `translate(${x * 30}px, ${y * 30}px)`;
+          });
+        });
+
+    </script>
+
+  <!--primer div de inicio-->
+  <div class="div1"><!--padre-->
+        <div class="div-hijo">
+            <h1>Introduccion</h1>
+                <p>En este proyecto se hablará de un solo tema, el cual es acerca de la vida de Sergio Daniel Villanueva Bolaños vista desde varios enfoques y puntos de vista desde mis principios, mis valores y creencias hasta la aplicación del calendario maya tzoquil en la vida, este proyecto ayudará a encontrarse primeramente consigomismo, a conocerse y a explorar su propia vida.
+                    Esta es una herramienta muy útil para que se llegue a conocer completamente y se dé cuenta de sus fortalezas y sus debilidades, en sintaxis en este proyecto se realizara una búsqueda del autoconocimiento y una auto evaluación.
+                    </p>
+        </div>
+        <div class="imagen1">
+            <img src="imagenes/chejito.png" alt="chejito">
+        </div>
+</div> 
+<div>
+
+</div>
+
+</body>
+<footer>
+    <p>Created by Sergio Villanueva</p>
+</footer>
+</html>

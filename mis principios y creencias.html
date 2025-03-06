@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis principios y creencias</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    <!-- Biblioteca de iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* 🔷 Fondo con degradado */
+
+
+        /* 🔹 Menú lateral */
+        .menu {
+            position: fixed;
+            top: 60px;
+            left: -250px;
+            width: 250px;
+            height: calc(100% - 60px);
+            background: #FFF;
+            z-index: 1050;
+            transition: left 0.5s ease-in-out;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .menu.active {
+            left: 0;
+        }
+
+        /* 🔹 Botón de menú */
+        .toggle {
+            position: fixed;
+            top: 80px;
+            left: 10px;
+            z-index: 1100;
+            cursor: pointer;
+        }
+        .toggle a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #262626;
+        }
+
+      /* 🔷 Fondo con degradado */
+        body {
+            background: linear-gradient(to right, rgb(59, 136, 123), #9bd5da);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 🔹 Contenedor de tarjetas centrado */
+        .cards-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        /* 🔹 Estilos de las tarjetas */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card img {
+            width: 120px; /* 🔥 Todas las imágenes tendrán el mismo ancho */
+            height: 120px; /* 🔥 Mantener proporción */
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        .card-content {
+            flex-grow: 1; /* 🔥 Asegura que todas las tarjetas sean iguales */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .card-button {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: auto; /* 🔥 Asegura que el botón siempre esté alineado al fondo */
+        }
+
+        .card-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 🔹 Footer */
+        footer {
+            background-color: #262626;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navegador-superior">
+            <div class="logo"><a href="#logo">logo chejo</a></div>
+                <ul class="nav-sup">
+                    <li><a href="inicio.html">inicio</a></li>
+                    <li><a href="mis principios y creencias.html">principios y creencias</a></li>
+                    <li><a href="mi vida.html">mi vida</a></li>
+                    <li><a href="experiencias.html">Objetos valiosos</a></li>
+                    <li><a href="mi pasion.html">mi pasión</a></li>
+                </ul>
+        </div>
+    </nav>
+
+
+    <!-- Botón de menú lateral -->
+    <div class="toggle">
+        <a href="#" id="menu-toggle"><i class="fa fa-bars"></i></a> 
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="#">Institución</a></li>
+            <li><a href="#">Datos Extra</a></li>
+        </ul>
+    </div>
+
+
+    <!-- 🔥 Tarjetas Centradas 🔥 -->
+    <div class="cards-wrapper">
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.dphBrQtbMxvDXDrvEpohHwAAAA?pid=ImgDet&w=134&h=134&c=7&dpr=1,1" alt="Valores">
+            <div class="card-content">
+                <a href="valores.html" class="card-button">Valores</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.Z6ENnnDVsjbEG0Vv7DyRpAHaF9?pid=ImgDet&w=134&h=111.1298076923077&c=7&dpr=1,1" alt="Principios">
+            <div class="card-content">
+                <a href="prinsipios.html" class="card-button">Mis principios</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://64.media.tumblr.com/c4a1ec683c5ce3216c23046dd1035e3a/tumblr_ottohtI1Fs1tzpx3po1_500.jpg" alt="Creencias">
+            <div class="card-content">
+                <a href="creeencias.html" class="card-button">Creencias</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 🔥 Corrección: Ahora el menú lateral se abre correctamente
+            $("#menu-toggle").click(function(e){
+                e.preventDefault();
+                $(".menu").toggleClass("active");
+            });
+        });
+    </script>
+
+</body>
+<footer>
+    <p>Created by Sergio Villanueva</p>
+</footer>
+</html>

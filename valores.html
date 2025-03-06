@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Valores en Acción</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    
+    <style>
+        /* 🔹 Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #74ebd5, #acb6e5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+        }
+
+
+
+        .logo a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-sup {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-sup li {
+            display: inline;
+        }
+
+        .nav-sup a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* 🔥 Menú toggle en móviles */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-sup {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .nav-sup.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* 🔹 Contenido Principal */
+        .main-content {
+            flex: 1;
+            margin-top: 80px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        /* 🔥 Tabla interactiva */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+
+        td {
+            background: rgba(78, 74, 74, 0.4);
+        }
+
+        /* 🔥 Animación al pasar el mouse */
+        tr {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        tr:hover {
+            transform: scale(1.03);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* 🔹 Footer */
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 🔹 Navegación -->
+    <nav>
+        <div class="navegador-superior">
+            <div class="logo"><a href="#">Logo Chejo</a></div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul class="nav-sup">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="mis principios y creencias.html">Principios y Creencias</a></li>
+                <li><a href="mi vida.html">Mi Vida</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="mi pasion.html">Mi Pasión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 🔹 Contenido -->
+    <div class="main-content">
+        <h1>🌟 Mis Valores en Acción 🌟</h1>
+        <p>Así aplico mis valores en mi vida diaria.</p>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Valor</th>
+                    <th>Definición</th>
+                    <th>Cómo lo aplico</th>
+                </tr>
+                <tr>
+                    <td>🛡️ Honestidad</td>
+                    <td>Actuar con sinceridad sin engañar.</td>
+                    <td>Siempre digo la verdad y expreso lo más cercano a la realidad.</td>
+                </tr>
+                <tr>
+                    <td>🤝 Respeto</td>
+                    <td>Consideración hacia ideas y personas.</td>
+                    <td>Escucho sin criticar y valoro cada punto de vista.</td>
+                </tr>
+                <tr>
+                    <td>❤️ Perdón</td>
+                    <td>Libertad de culpa y rencores.</td>
+                    <td>Olvido las ofensas y vivo en paz con quienes me han herido.</td>
+                </tr>
+                <tr>
+                    <td>🔥 Perseverancia</td>
+                    <td>Continuar a pesar de los obstáculos.</td>
+                    <td>Estudio lejos de casa y me esfuerzo el doble.</td>
+                </tr>
+                <tr>
+                    <td>🧘 Tolerancia</td>
+                    <td>Respetar diferencias y preferencias.</td>
+                    <td>Afronto adversidades con tranquilidad.</td>
+                </tr>
+                <tr>
+                    <td>💙 Empatía</td>
+                    <td>Comprender sentimientos ajenos.</td>
+                    <td>Me pongo en el lugar de otros y ayudo cuando puedo.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <p>Created by Sergio Villanueva</p>
+    </footer>
+
+    <!-- 🔥 Script para el menú toggle -->
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector(".nav-sup");
+            navMenu.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>

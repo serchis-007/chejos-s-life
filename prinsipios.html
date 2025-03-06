@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Principios y Valores</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* 🔷 Fondo con degradado dinámico */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #74ebd5, #acb6e5);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* 🔹 Contenedor de tarjetas */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+        }
+
+        /* 🔥 Tarjetas animadas */
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 280px;
+            height: 180px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .card i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* 🔥 Efecto de resplandor en el hover */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+            transition: transform 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+            transform: rotate(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navegador-superior">
+            <div class="logo"><a href="#logo">logo chejo</a></div>
+                <ul class="nav-sup">
+                    <li><a href="inicio.html">inicio</a></li>
+                    <li><a href="mis principios y creencias.html">principios y creencias</a></li>
+                    <li><a href="mi vida.html">mi vida</a></li>
+                    <li><a href="experiencias.html">experiencias</a></li>
+                    <li><a href="mi pasion.html">mi pasión</a></li>
+                </ul>
+        </div>
+    </nav>
+
+    <!-- Botón de menú lateral -->
+    <div class="toggle">
+        <a href="#" id="menu-toggle"><i class="fa fa-bars"></i></a> 
+    </div>
+
+    <!-- Menú lateral -->
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="institucion.html">Institución</a></li>
+            <li><a href="datoExtra.html">Datos Extra</a></li>
+        </ul>
+    </div>
+
+    <h1>🌟 Mis Principios y Valores 🌟</h1>
+    <p>Estos son los valores que guían mi vida.</p>
+
+    <!-- 🔥 Contenedor de Tarjetas -->
+    <div class="container">
+        <div class="card"><i class="fas fa-peace"></i><h3>Gracia</h3><p>Me mantengo tranquilo ante las adversidades con paciencia y compasión.</p></div>
+        <div class="card"><i class="fas fa-heart"></i><h3>Perdón</h3><p>Aprendí a soltar el enojo y la tristeza para liberar mi alma.</p></div>
+        <div class="card"><i class="fas fa-piggy-bank"></i><h3>Ahorro</h3><p>Desde pequeño administro bien mi dinero para que nunca falte.</p></div>
+        <div class="card"><i class="fas fa-balance-scale"></i><h3>Honradez</h3><p>Siempre consigo lo que deseo con esfuerzo y ética.</p></div>
+        <div class="card"><i class="fas fa-hammer"></i><h3>Trabajo</h3><p>Desde los 12 años mis padres me enseñaron a ganarme la vida.</p></div>
+        <div class="card"><i class="fas fa-hand-holding-heart"></i><h3>Solidaridad</h3><p>Siempre comparto lo que tengo con quienes lo necesitan.</p></div>
+        <div class="card"><i class="fas fa-brain"></i><h3>Sabiduría</h3><p>Pienso bien cada decisión y la encomiendo a Dios.</p></div>
+        <div class="card"><i class="fas fa-fist-raised"></i><h3>Coraje</h3><p>He aprendido a enfrentar retos sin dar un paso atrás.</p></div>
+        <div class="card"><i class="fas fa-users"></i><h3>Respeto</h3><p>Escucho con gratitud y respondo de manera agradable.</p></div>
+        <div class="card"><i class="fas fa-crown"></i><h3>Liderazgo</h3><p>Trato bien a los demás y sé aceptar sus opiniones.</p></div>
+    </div>
+
+    <!-- 🔥 Script para el menú lateral -->
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.querySelector(".menu").classList.toggle("show");
+        });
+    </script>
+
+    <!-- 🔥 Footer -->
+    <footer>
+        <p>Created by Sergio Villanueva</p>
+    </footer>
+
+</body>
+</html>

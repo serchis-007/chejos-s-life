@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pasión</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        /* 🔷 Fondo con degradado */
+        body {
+            background: linear-gradient(to right, #9bd5da ,rgb(59, 136, 123));
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* 🔹 Contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        /* 🔥 Tarjetas de sección */
+        .section-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* 🔹 Imágenes con efecto */
+        .section-image, .section-video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section-image:hover, .section-video:hover {
+            transform: scale(1.05);
+        }
+
+        /* 🔥 Menú lateral */
+        .menu {
+            position: fixed;
+            top: 60px;
+            left: -250px;
+            width: 250px;
+            height: calc(100% - 60px);
+            background: #FFF;
+            z-index: 1050;
+            transition: left 0.5s ease-in-out;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu.active {
+            left: 0;
+        }
+
+        /* 🔹 Botón de menú */
+        .toggle {
+            position: fixed;
+            top: 80px;
+            left: 10px;
+            z-index: 1100;
+            cursor: pointer;
+        }
+
+        .toggle a {
+            text-decoration: none;
+            font-size: 24px;
+            color: black;
+        }
+
+        /* 🔥 Footer */
+        footer {
+            background: #262626;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            width: 100%;
+            position: relative;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 🔥 Navbar -->
+    <nav>
+        <div class="navegador-superior">
+            <div class="logo"><a href="#logo">logo chejo</a></div>
+                <ul class="nav-sup">
+                    <li><a href="inicio.html">inicio</a></li>
+                    <li><a href="mis principios y creencias.html">principios y creencias</a></li>
+                    <li><a href="mi vida.html">mi vida</a></li>
+                    <li><a href="experiencias.html">Objetos valiosos</a></li>
+                    <li><a href="mi pasion.html">mi pasión</a></li>
+                </ul>
+        </div>
+    </nav>
+
+    <!-- 🔥 Botón de menú lateral -->
+    <div class="toggle">
+        <a href="#" id="menu-toggle"><i class="fa fa-bars"></i></a> 
+    </div>
+
+    <!-- 🔥 Menú lateral -->
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="institucion.html">Institución</a></li>
+            <li><a href="datoExtra.html">Datos Extra</a></li>
+        </ul>
+    </div>
+
+    <!-- 🔥 Contenido Creativo -->
+    <div class="container">
+
+        <!-- 🔹 Sección Atletismo -->
+        <div class="section-card">
+            <h1>🏃 Atletismo</h1>
+            <p>El atletismo es uno de los deportes que me apasionan y el segundo que más me gusta practicar. Estoy en la categoría sub-20 de la federación de atletismo de Santa Rosa. Cuando estuve en la categoría sub-18, competí en eventos de 200 y 400 metros, participando en los rankings nacionales.</p>
+            <p>Lo más cerca que estuve de clasificar a los Juegos Nacionales fue el año pasado con un tiempo de 59 segundos, quedando en 7mo lugar a nivel nacional.</p>
+            <img class="section-image" src="imagenes/foto-atletismo.jpg" alt="Ranking Atletismo">
+        </div>
+
+        <!-- 🔹 Sección Fútbol -->
+        <div class="section-card">
+            <h1>⚽ Fútbol</h1>
+            <p>El fútbol fue mi primer amor deportivo. Al principio fui portero y participé en la liga Claro, pero luego dejé el deporte por unos años. Más tarde, volví a jugar, pero ahora como defensa izquierdo o derecho, aprovechando que soy ambidiestro.</p>
+            <p>Uno de mis logros fue ganar copas escolares con mi equipo. ¡El fútbol siempre será parte de mí!</p>
+            <video class="section-video" src="videos/victoria.mp4" controls></video>
+        </div>
+
+        <!-- 🔹 Sección Ciclismo -->
+        <div class="section-card">
+            <h1>🚴 Ciclismo</h1>
+            <p>Comencé con el ciclismo gracias a mi papá, quien me motivó a entrenar para mejorar mi salud. Con el tiempo, me enamoré del deporte, mejoré mi condición física y comencé a ganar competencias.</p>
+            <p>Mi bicicleta es mi compañera de aventuras: he recorrido distintos departamentos, playas y hasta la frontera con El Salvador.</p>
+            <img class="section-image" src="imagenes/bicicleta.jpg" alt="Mi Bicicleta">
+        </div>
+
+    </div>
+
+    <!-- 🔥 Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#menu-toggle").click(function(e){
+                e.preventDefault();
+                $(".menu").toggleClass("active");
+            });
+        });
+    </script>
+
+    <!-- 🔥 Footer -->
+    <footer>
+        <p>Created by Sergio Villanueva</p>
+    </footer>
+
+</body>
+</html>

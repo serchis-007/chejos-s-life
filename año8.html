@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Creativa</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        /* 🔷 Fondo con degradado */
+        body {
+            background: linear-gradient(to right, #9bd5da ,rgb(59, 136, 123));
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* 🔹 Contenedor principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+        }
+
+        /* 🔥 Imagen centrada con efecto */
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container:hover {
+            transform: scale(1.1);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.2);
+        }
+
+        /* 🔥 Menú lateral */
+        .menu {
+            position: fixed;
+            top: 60px;
+            left: -250px;
+            width: 250px;
+            height: calc(100% - 60px);
+            background: #FFF;
+            z-index: 1050;
+            transition: left 0.5s ease-in-out;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu.active {
+            left: 0;
+        }
+
+        /* 🔹 Botón de menú */
+        .toggle {
+            position: fixed;
+            top: 80px;
+            left: 10px;
+            z-index: 1100;
+            cursor: pointer;
+        }
+
+        .toggle a {
+            text-decoration: none;
+            font-size: 24px;
+            color: white;
+        }
+
+        /* 🔥 Footer */
+        footer {
+            background: #262626;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 🔥 Navbar -->
+    <nav>
+        <div class="navegador-superior">
+            <div class="logo"><a href="#logo">logo chejo</a></div>
+                <ul class="nav-sup">
+                    <li><a href="inicio.html">inicio</a></li>
+                    <li><a href="mis principios y creencias.html">principios y creencias</a></li>
+                    <li><a href="mi vida.html">mi vida</a></li>
+                    <li><a href="experiencias.html">experiencias</a></li>
+                    <li><a href="mi pasion.html">mi pasión</a></li>
+                </ul>
+        </div>
+    </nav>
+
+    <!-- 🔥 Botón de menú lateral -->
+    <div class="toggle">
+        <a href="#" id="menu-toggle"><i class="fa fa-bars"></i></a> 
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index_PDV">Home</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Institución</a></li>
+            <li><a href="#">Datos Extra</a></li>
+        </ul>
+    </div>
+    <!-- 🔥 
+
+    <!-- 🔥 Contenido Creativo -->
+    <div class="container">
+        <h1>Año 8</h1>
+        <div class="image-container">
+            <img src="imagenes/año4.jpg" alt="Imagen Creativa">
+        </div>
+    </div>
+
+    <!-- 🔥 Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#menu-toggle").click(function(e){
+                e.preventDefault();
+                $(".menu").toggleClass("active");
+            });
+        });
+    </script>
+
+    <!-- 🔥 Footer -->
+    <footer>
+        <p>Created by Sergio Villabueva</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+div {
+    position: relative;
+    margin: auto;
+    border-radius: 20px;
+    place-items: center;
+    width: 60%;
+    padding: 100px;
+    background-color:  rgba(59, 136, 123,0.8); /* Ajustar opacidad */
+}
+
+.background {
+    position: fixed; /* Hacer que el fondo sea fijo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajuste a 100% para evitar bordes vacíos */
+    height: 100%; /* Ajuste a 100% para evitar bordes vacíos */
+    background-image: url('https://www.gratistodo.com/wp-content/uploads/2016/10/paisajes-oto%C3%B1o-wallpapers.jpg');
+    background-size: cover; /* Asegurar que la imagen cubra todo el fondo */
+    background-position: center; /* Centrar la imagen */
+    opacity: 0.6; /* Ajustar opacidad de la imagen de fondo */
+}
+.log-button:hover{
+    color: black;
+    width: 100px;
+    transition: left 0.5s;
+    text-decoration: none;
+}
+
+
+
+
+h1, .vision, .mision {
+    text-align: center;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: darkgray;
+    padding: 15px;
+    width: fit-content; /* Ajuste el ancho al contenido */
+}
+

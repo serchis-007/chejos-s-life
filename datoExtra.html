@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaías 41:10</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    
+    <style>
+        /* 🔹 Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?heaven,clouds,light') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* 🔥 Centra el contenido verticalmente */
+            text-align: center;
+            color: black;
+            height: 100vh; /* 🔥 Usa toda la pantalla */
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+  
+        .logo a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-sup {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-sup li {
+            display: inline;
+        }
+
+        .nav-sup a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* 🔥 Menú lateral */
+        .menu {
+            position: fixed;
+            top: 60px;
+            left: -250px;
+            width: 250px;
+            height: calc(100% - 60px);
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1050;
+            transition: left 0.5s ease-in-out;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+            padding-top: 20px;
+        }
+
+        .menu.active {
+            left: 0;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            padding: 15px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            display: block;
+        }
+
+        /* 🔥 Botón de menú lateral */
+        .toggle {
+            position: fixed;
+            top: 80px;
+            left: 10px;
+            z-index: 1100;
+            cursor: pointer;
+        }
+
+        .toggle a {
+            text-decoration: none;
+            font-size: 24px;
+            color: black;
+        }
+
+        /* 🔹 Contenedor del versículo centrado */
+        .versiculo-container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 26px;
+            font-style: italic;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        /* 🔥 Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* 🔹 Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 🔹 Navbar -->
+    <nav>
+        <div class="navegador-superior">
+            <div class="logo"><a href="#">Logo Chejo</a></div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-sup">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="mis principios y creencias.html">Principios y Creencias</a></li>
+                <li><a href="mi vida.html">Mi Vida</a></li>
+                <li><a href="experiencias.html">Objetos valiosos</a></li>
+                <li><a href="mi pasion.html">Mi Pasión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 🔹 Botón de menú lateral -->
+    <div class="toggle">
+        <a href="#" id="menu-toggle"><i class="fa fa-bars"></i></a> 
+    </div>
+
+    <!-- 🔹 Menú lateral -->
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="institucion.html">Institución</a></li>
+            <li><a href="datoExtra.html">Datos Extra</a></li>
+        </ul>
+    </div>
+
+    <!-- 🔥 Versículo en el centro -->
+    <div class="versiculo-container">
+        <h1>📖 Isaías 41:10 (Reina Valera) 📖</h1>
+        <p>«No temas, porque yo estoy contigo;  
+        no desmayes, porque yo soy tu Dios  
+        que te esfuerzo;  
+        siempre te ayudaré,  
+        siempre te sustentaré  
+        con la diestra de mi justicia.»</p>
+    </div>
+
+    <!-- 🔥 Script para el menú toggle -->
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
+    </script>
+
+    <!-- 🔥 Footer -->
+    <footer>
+        <p>Created by Sergio Villanueva</p>
+    </footer>
+
+</body>
+</html>

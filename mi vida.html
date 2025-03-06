@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi vida</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    <!-- Biblioteca de iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* 🔷 Fondo con degradado */
+        body {
+            background: linear-gradient(to right, #9bd5da, rgb(59, 136, 123));
+            height: 100vh;
+            margin: 0;
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        /* 🔥 Contenedor del carrusel centrado */
+        .swiper-container {
+            width: 90%;
+            max-width: 900px;
+            padding: 20px 0;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 🔹 Tarjetas dentro del carrusel */
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 280px;
+            text-align: center;
+            height: auto; /* Evita que las tarjetas se alarguen */
+        }
+
+        /* 🔹 Imágenes de las tarjetas */
+        .swiper-slide img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* 🔹 Contenido de las tarjetas */
+        .card-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        /* 🔹 Botón dentro de la tarjeta */
+        .card-button {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: auto;
+        }
+
+        .card-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navegador-superior">
+            <div class="logo"><a href="#logo">logo chejo</a></div>
+            <ul class="nav-sup">
+                <li><a href="inicio.html">inicio</a></li>
+                <li><a href="mis principios y creencias.html">principios y creencias</a></li>
+                <li><a href="mi vida.html">mi vida</a></li>
+                <li><a href="experiencias.html">Objetos valiosos</a></li>
+                <li><a href="mi pasion.html">mi pasión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 🔥 Botón de menú lateral -->
+    <div class="toggle">
+        <a href="#" id="menu-toggle"><i class="fa fa-bars"></i></a> 
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="institucion.html">Institución</a></li>
+            <li><a href="datoExtra.html">Datos Extra</a></li>
+        </ul>
+    </div>
+
+       <!-- 🔥 Carrusel de tarjetas en el centro 🔥 -->
+       <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Generamos 19 tarjetas con "Año 0" hasta "Año 18" -->
+            <!-- Las imágenes son solo ejemplos, puedes cambiarlas -->
+            <script>
+                for (let i = 0; i < 19; i++) {
+                    document.write(`
+                        <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>El Milagro de mi Nacimiento</h2>
+                                <p> Año ${0}. Mis padres deseaban un hijo varón y oraron mucho para que pudiera nacer. Los médicos decían que tendría graves problemas de salud y deformidades, pero mis padres confiaron en Dios. A pesar de los pronósticos negativos y los intentos médicos de interrumpir el embarazo sin que mi madre lo supiera, nací el 14 de mayo de 2007 completamente sano, demostrando que Dios es milagroso..</p>
+                                <a href="año0.html" class="card-button">Año ${0}</a>
+                            </div>
+                        </div>
+        <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Un Bebé Tranquilo</h2>
+                                <p> Año ${1}. Mis padres me describen como un niño sano y tranquilo. No lloraba mucho y tomaba leche materna, lo que me dio buena salud. Mi papá recuerda que intentaba correr antes de aprender a caminar, lo que dificultó mi aprendizaje. Finalmente, logré dar mis primeros pasos..</p>
+                                <a href="año1.html" class="card-button">Año ${1}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2> Silencioso y Observador</h2>
+                                <p>Año ${2}. Seguía siendo un niño tranquilo, sin mucho ruido ni problemas. Mi abuela comenzó a cuidarme. Mi hermana, al principio, no me aceptaba, por lo que mis padres le dijeron que yo era "de ella", lo que hizo que me viera como su juguete y así logró aceptarme en la familia..</p>
+                                <a href="año2.html" class="card-button">Año ${2}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Aprendiendo a Nadar y mi Primer Amigo</h2>
+                                <p>Año ${3}. A pesar de que aún no hablaba, empecé a aprender cosas nuevas. Aprendí a nadar con un chaleco salvavidas en un lugar llamado "La Carreta". Mi hermana me asustaba con que había ballenas en la piscina, lo que posiblemente influyó en mi miedo al agua profunda. Además, hice a mi primer mejor amigo, Carlitos, quien vivía en mi colonia..</p>
+                                <a href="año3.html" class="card-button">Año ${3}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Mis Primeras Palabras y un Problema Curioso</h2>
+                                <p>Año ${4}. Después de tres años sin hablar, mis padres pensaron que era mudo. Intentaron todo, incluso darle semillas de loro, pero nada funcionaba. Un día, me llevaron al mercado de Barberena y al regresar a casa, finalmente hablé. Sin embargo, mi primera palabra no fue "mamá" o "papá", sino "vos cer*te", lo que me costó mi primera reprimenda..</p>
+                                <a href="año4.html" class="card-button">Año ${4}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2> Mi Primer Día de Clases</h2>
+                                <p>Año ${5}. Mi mamá me despertó emocionada para mi primer día en el colegio. Aunque al principio fue confuso, logré integrarme con mis compañeros, como Daniel, Leilany y Alejandra. A pesar de que ellos formaron grupos rápidamente, yo sentí que no encajaba del todo. En casa, me gustaba subirme a los árboles frente a mi casa, algo que me divertía mucho..</p>
+                                <a href="año5.html" class="card-button">Año ${5}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2> Un Año de Descubrimientos y un Gran Error</h2>
+                                <p>Año ${6}. Este año todos hablaban del fin del mundo (2012), pero para mí solo fue un año en el que empecé a notar mejor mi entorno. Iba a la tienda de mis papás en el mercado y gastaba dinero en dulces. Un día, sin darme cuenta, tomé una moneda de plata valuada en Q500 y la usé para comprar en la tienda. Afortunadamente, el tendero la devolvió y mis padres me dieron una gran lección sobre la responsabilidad..</p>
+                                <a href="año6.html" class="card-button">Año ${6}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Problemas en el Colegio</h2>
+                                <p>Año ${7}. Entré a primero de primaria, pero mi maestra no me trataba bien. Hablaba mucho en clase y me enviaban muchos reportes por no hacer tareas, ya que prefería jugar con mi amigo Carlitos. Como mis papás no estaban en casa en las tardes, aprendí a falsificar la firma de mi mamá para evitar regaños por mis reportes escolares..</p>
+                                <a href="año7.html" class="card-button">Año ${7}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Un Año de Emociones y un Nuevo Hermano</h2>
+                                <p>Año ${8}. Este año fue muy emocionante porque fue el Mundial de Brasil 2014, donde jugaba mi ídolo Neymar. Apostaba con mi tío Cristofer, pero al final Brasil perdió y también yo. Sin embargo, lo más importante de este año fue el nacimiento de mi hermano Eduardo. Recuerdo que mi papá le ponía música a mi mamá cuando estaba embarazada, en especial Michael Jackson, y mi hermano reaccionaba con pataditas. Aunque mi mamá tuvo una fuerte pulmonía después del parto, gracias a Dios se recuperó y pudo cuidar a mi hermano..</p>
+                                <a href="año8.html" class="card-button">Año ${8}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Aprendiendo a Ser Hermano Mayor</h2>
+                                <p>Año ${9}. Pasaba mucho tiempo con Eduardo, ayudaba a mi mamá con su pañalera y lo entretenía con peluches. Me encantaba hacerlo reír. En el colegio, sufría porque algunos compañeros me molestaban y me tiraban la lonchera. Este año también fue triste porque mi mejor amigo Carlitos se fue a EE.UU., lo que me dejó un gran vacío..</p>
+                                <a href="año9.html" class="card-button">Año ${9}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Aprendiendo a Pescar y Cazar</h2>
+                                <p>Año ${10}. Mi papá decidió enseñarme a cazar y pescar, como lo hacían él y mis tíos. Al principio, mi mamá no estaba de acuerdo porque era peligroso, así que mi papá empezó llevándome a pescar. Aprendí a hacer una caña con bambú e hilo, a hacer nudos y a lanzar el anzuelo. Cuando me vio listo, me llevó de caza. El primer día aprendí a disparar y a no quejarme del frío ni del hambre. Logré hacerlo bien, y al final llevamos un venado a casa.</p>
+                                <a href="año10.html" class="card-button">Año ${10}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Nuevos Amigos y Locuras</h2>
+                                <p>Año ${11}. Este año conocí a mi nuevo mejor amigo, Bryan. Al principio me caía mal porque era muy molesto, pero con el tiempo nos hicimos inseparables. Hacíamos muchas locuras, como escaparnos a comprar estampitas del álbum del Real Madrid o jugar un juego peligroso donde lanzábamos cuchillos al aire (afortunadamente, siempre perdíamos 😆). También jugábamos fútbol, aunque yo era portero porque era obeso y nadie quería que jugara en otra posición. Me pusieron el apodo de Keylor Navas.</p>
+                                <a href="año11.html" class="card-button">Año ${11}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Cambio de Colegio y Primer Amor</h2>
+                                <p>Año ${12}. Me cambié al Liceo Mixto Guadalupano porque ahí estudiaba Bryan. Al principio me costó adaptarme, pero hice nuevos amigos: Yurem, Jordí y Héctor. Las clases eran muy fáciles, especialmente matemáticas, y me iba muy bien. Este año me enamoré por primera vez de una niña llamada Alejandra, aunque en ese momento no entendía qué significaba estar enamorado. Mi amigo Bryan fue quien me hizo darme cuenta de lo que sentía..</p>
+                                <a href="año12.html" class="card-button">Año ${12}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Estudiando Inglés con Adultos</h2>
+                                <p>Año ${13}. Mi papá decidió que estudiara inglés en la Academia Europea en la capital. Como vivíamos en Santa Rosa, tenía que viajar en bus público con mi hermana. Me pusieron en un grupo de adultos, lo que sorprendía a todos. Aunque no era muy bueno en inglés, me esforzaba al máximo.</p>
+                                <a href="año13.html" class="card-button">Año ${13}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2> Pandemia y Mi Primera Novia</h2>
+                                <p>Año ${14}. Este fue el año del COVID-19, y muchas cosas cambiaron. Tuve mi primera novia, Alejandra, pero justo cuando empezábamos, la pandemia nos separó porque cerraron el colegio. Sin embargo, seguíamos viéndonos a escondidas (hasta choqué el carro de mi papá por hacer esas locuras 😬). Me costó mucho estar encerrado en casa, y en vez de estudiar, me la pasaba jugando Fortnite y Apex en mi Xbox.</p>
+                                <a href="año14.html" class="card-button">Año ${14}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2> Un Año Difícil con Clases en Línea</h2>
+                                <p>Año ${15}. Las clases seguían siendo virtuales, lo que me aburría mucho y no entendía bien los temas. Decidí pasar más tiempo ayudando a mi papá en la finca, cultivando y cosechando. También me tocó vacunarme, lo cual me asustaba, pero al final lo hice.</p>
+                                <a href="año15.html" class="card-button">Año ${15}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Nuevo Colegio y Mundo de la Joyería</h2>
+                                <p>Año ${16}. Decidí cambiarme de colegio sin decirle a mis papás. Entré a INSAR porque ahí daban clases semipresenciales (y porque ahí estudiaba Alejandra 😆). Este año también fue importante porque mi papá me enseñó a hacer joyas, algo que al principio me costó, pero que con el tiempo aprendí.</p>
+                                <a href="año16.html" class="card-button">Año ${16}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2>Viajando y Mejorando en los Estudios</h2>
+                                <p>Año ${17}. Me propuse mejorar mis notas, y lo logré. Descubrí que si me esforzaba mucho en los primeros tres bimestres, podía relajarme en el cuarto. Este año también viajé mucho:
+🌍 Fui a Panamá y probé comida deliciosa, aunque la gente no era muy amable.
+🏖️ Fui a Miami, donde el mar estaba congelado pero hermoso.
+🌆 Fui a Los Ángeles a visitar a mi tía. </p>
+                                <a href="año17.html" class="card-button">Año ${17}</a>
+                            </div>
+                        </div>
+                               <div class="swiper-slide">
+                            <div class="card-content">
+                                <h2> Aprendiendo y Creciendo</h2>
+                                <p>Año ${18}. Este año aprendí bien el trabajo familiar en la joyería, lo que me hizo sentir útil. También dejé de vivir solo y me mudé con la familia de mi amigo Alejandro, quienes me recibieron como un hijo más. Ahora, me esfuerzo por ser más organizado y aplicado, confiando en que con la ayuda de Dios lograré todo lo que me proponga. 🙏.</p>
+                                <a href="año18.html" class="card-button">Año ${18}</a>
+                            </div>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+       
+    </div>
+
+    <!-- 🔥 Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#menu-toggle").click(function(e){
+                e.preventDefault();
+                $(".menu").toggleClass("active");
+            });
+        });
+    </script>
+
+    <!-- Swiper.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            spaceBetween: 20,
+            slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                600: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    </script>
+</body>
+<footer>
+    <p>Created by Sergio Villanueva</p>
+</footer>
+</html>

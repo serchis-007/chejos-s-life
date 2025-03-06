@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Objetos Especiales</title>
+    <link rel="stylesheet" href="Mis_P&C.css">
+    
+    <style>
+        /* 🔹 Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #71838b, #ecfbff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* 🔹 Menú lateral */
+        .menu {
+            position: fixed;
+            top: 60px;
+            left: -250px;
+            width: 250px;
+            height: calc(100% - 60px);
+            background: #FFF;
+            z-index: 1050;
+            transition: left 0.5s ease-in-out;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu.active {
+            left: 0;
+        }
+
+        /* 🔹 Botón de menú */
+        .toggle {
+            position: fixed;
+            top: 80px;
+            left: 10px;
+            z-index: 1100;
+            cursor: pointer;
+        }
+
+        .toggle a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #262626;
+        }
+
+        /* 🔹 Contenedor */
+        .main-content {
+            flex: 1;
+            margin-top: 100px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* 🔥 Tarjetas interactivas (flip card) */
+        .card {
+            width: 300px;
+            height: 400px;
+            perspective: 1200px; /* Profundidad para el efecto 3D */
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card-front {
+            background: white;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 70%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .card-back {
+            background: #5ed67c;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        /* 🔹 Footer fijo */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🔹 Navbar -->
+    <nav>
+        <div class="navegador-superior">
+            <div class="logo"><a href="#">Logo Chejo</a></div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-sup">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="mis principios y creencias.html">Principios y Creencias</a></li>
+                <li><a href="mi vida.html">Mi Vida</a></li>
+                <li><a href="experiencias.html">Objetos valiosos</a></li>
+                <li><a href="mi pasion.html">Mi Pasión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 🔹 Botón de menú lateral -->
+    <div class="toggle">
+        <a href="#" id="menu-toggle"><i class="fa fa-bars"></i></a> 
+    </div>
+
+    <!-- 🔹 Menú lateral -->
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="institucion.html">Institución</a></li>
+            <li><a href="datoExtra.html">Datos Extra</a></li>
+        </ul>
+    </div>
+
+    <!-- 🔥 Contenido -->
+    <div class="main-content">
+        <!-- Tarjeta de la guitarra -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="imagenes/guitarra.jpg" alt="Mi guitarra">
+                    <h3>Mi Guitarra</h3>
+                </div>
+                <div class="card-back">
+                    <p>Antes que me adueñara de ella, era de mi papá. Es un objeto muy especial para mí.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta de la bicicleta -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="imagenes/bicicleta.jpg" alt="Mi bicicleta">
+                    <h3>Mi Bicicleta</h3>
+                </div>
+                <div class="card-back">
+                    <p>Me ha acompañado en competencias y es gran parte de mi vida.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta de la Biblia -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="imagenes/biblia.jpg" alt="Mi Biblia">
+                    <h3>Mi Biblia</h3>
+                </div>
+                <div class="card-back">
+                    <p>Me la regaló mi abuela y me acerca a Dios. Siempre trato de leerla o recordar sus enseñanzas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔥 Footer -->
+    <footer>
+        <p>Created by Sergio Villanueva</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
